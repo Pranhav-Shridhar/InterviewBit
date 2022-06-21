@@ -1,0 +1,26 @@
+<!-- What is the difference between <meter> tag and <progress> tag?
+    
+    <progress> tag should be used when we want to show the completion progress of a task, whereas if we just want a scalar measurement within a known range or fraction value. Also, we can specify multiple extra attributes for <meter> tags like ‘form’, ‘low’, ‘high’, ‘min’, etc.
+    -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Progress tag</title>
+  </head>
+  <body>
+    <p>Normal Progress bar</p>
+    <progress></progress>
+    <p>Progress bar with max and value attributes</p>
+    <progress value="50" max="200"></progress>
+    <p>Progress bar with CSS</p>
+    <progress style="width: 200px; height: 40px"></progress>
+
+    <p>Normal Meter</p>
+    <meter value="0.6"></meter>
+    <p>Meter tag with attributes</p>
+    <meter value="50" max="200" min="20"></meter>
+    <p>Meter tag with CSS</p>
+    <meter value="0.4" style="width: 200px; height: 40px"></meter>
+  </body>
+</html>

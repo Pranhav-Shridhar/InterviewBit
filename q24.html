@@ -1,0 +1,25 @@
+<!-- How to specify the link in HTML and explain the target attribute?
+
+
+HTML provides a hyperlink - <a> tag to specify the links in a webpage. The ‘href’ attribute is used to specify the link and the ‘target’ attribute is used to specify, where do we want to open the linked document. The ‘target’ attribute can have the following values:
+
+_self: This is a default value. It opens the document in the same window or tab as it was clicked.
+_blank: It opens the document in a new window or tab.
+_parent: It opens the document in a parent frame.
+_top: It opens the document in a full-body window. -->
+
+<!DOCTYPE html>
+<html>
+  <body>
+    <h2>The target Attribute</h2>
+
+    <a href="https://www.w3schools.com/" target="_blank">Visit W3Schools!</a>
+    <a href="https://www.w3schools.com/" target="_self">Visit W3Schools!</a>
+    <a href="https://www.w3schools.com/" target="_top">Visit W3Schools!</a>
+    <a href="https://www.w3schools.com/" target="_parent">Visit W3Schools!</a>
+
+    <p>
+      If target="_blank", the link will open in a new browser window or tab.
+    </p>
+  </body>
+</html>

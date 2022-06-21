@@ -1,0 +1,16 @@
+<!-- What are the server-sent events in HTML5?
+
+The events pushed from the webserver to the browsers are called server-sent events. DOM elements can be continuously updated using these events. This has a major advantage over straight-up polling. In polling, there is a lot of overhead since every time it is establishing an HTTP connection and tearing it down whereas, in server-sent events, there is one long-lived HTTP connection. To use a server-sent event, <eventsource> element is used. The src attribute of this element specifies the URL from which sends a data stream having the events. -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <eventsource src="/cgi-bin/myfile.cgi" />
+  </body>
+</html>

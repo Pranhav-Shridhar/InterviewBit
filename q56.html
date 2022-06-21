@@ -1,0 +1,20 @@
+<!-- What is the usage of a novalidate attribute for the form tag that is introduced in HTML5?
+
+Its value is a boolean type that indicates whether or not the data being submitted by the form will be validated beforehand. By making this false, forms can be submitted without validation which helps users to resume later also. -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form action="" method="get" novalidate>
+      Name:<br /><input type="name" name="sname" /><br />
+      Doubt:<br /><input type="number" name="doubt" /><br />
+      <input type="submit" value="Submit" />
+    </form>
+  </body>
+</html>

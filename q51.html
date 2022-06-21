@@ -1,0 +1,42 @@
+<!-- What are the New tags in Media Elements in HTML5?
+
+<audio> - Used for sounds, audio streams, or music, embed audio content without any additional plug-in.
+<video> - Used for video streams, embed video content etc.
+<source> - Used for multiple media resources in media elements, such as audio, video, etc.
+<embed> - Used for an external application or embedded content.
+<track> - Used for subtitles in the media elements such as video or audio -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <label> Video: </label>
+    <video width="320" height="240" controls>
+      <source src="video.mp4" type="video/mp4" />
+      <track
+        src="subtitles.vtt"
+        kind="subtitles"
+        srclang="en"
+        label="English"
+      />
+    </video>
+    <br />
+    <label> Embed: </label>
+    <embed
+      type="video/webm"
+      src="https://www.youtube.com/embed/MpoE6s2psCw"
+      width="400"
+      height="300"
+    />
+    <br />
+    <label> Audio: </label>
+    <audio controls>
+      <source src="audio.mp3" type="audio/mpeg" />
+    </audio>
+  </body>
+</html>

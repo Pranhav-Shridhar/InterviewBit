@@ -1,0 +1,35 @@
+<!-- Why do you think the addition of drag-and-drop functionality in HTML5 is important? How will you make an image draggable in HTML5?
+
+The drag and drop functionality is a very intuitive way to select local files. This is similar to what most of the OS have copy functionality thus making it very easy for the user to comprehend. Before the native drag and drop API, this was achievable by writing complex Javascript programming or external frameworks like jQuery. -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <script>
+      function allowDrop(ev) {
+        ev.preventDefault();
+      }
+      function drop(ev) {
+        ...
+      }
+    </script>
+  </head>
+  <body>
+    ...
+    <div
+      id="div1"
+      ondrop="drop(event)"
+      ondragover="allowDrop(event)"
+      style="border: 1px solid #aaaaaa; width: 350px; height: 70px"
+    ></div>
+    <br />
+    <img
+      id="drag1"
+      src="img_logo.gif"
+      draggable="true"
+      width="336"
+      height="69"
+    />
+    ...
+  </body>
+</html>

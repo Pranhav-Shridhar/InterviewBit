@@ -1,0 +1,19 @@
+<!-- What are different approaches to make an image responsive?
+
+Art direction - Using <picture> element the landscape image fully shown in desktop layout can be zoomed in with the main subject in focus for a portrait layout. -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <picture>
+      <source media="(min-width: 650px)" srcset="img_cup.jpg" />
+      <img src="img_marsh.jpg" style="width: auto" />
+    </picture>
+  </body>
+</html>

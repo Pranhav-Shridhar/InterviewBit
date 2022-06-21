@@ -1,0 +1,39 @@
+<!-- What are Web Workers?
+
+These are added to bring parallelism and async capability. It runs in the background to do the computationally expensive tasks without yielding to make the page responsive. It is achieved by starting a separate thread for such tasks. These are not meant to perform UI operations. There are three types of web workers:
+
+Dedicated Workers - These are workers that are utilized by a single script.
+Shared Workers -These are workers that are utilized by multiple scripts running in different windows, IFrames, etc.
+Service Workers - These act as proxy servers between web applications, the browser, and the network. Mostly used for push notifications and sync APIs. -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p>Count numbers: <output id="result"></output></p>
+    <button onclick="startWorker()">Start Worker</button>
+    <button onclick="stopWorker()">Stop Worker</button>
+    <script>
+      var w;
+      function startWorker() {
+        if (typeof Worker !== "undefined") {
+          if (typeof w == "undefined") {
+            w = new Worker("demo_workers.js");
+          }
+          w.onmessage = function (event) {
+            document.getElementById("result").innerHTML = event.data;
+          };
+        }
+      }
+      function stopWorker() {
+        w.terminate();
+        w = undefined;
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,36 @@
+<!-- What is Microdata in HTML5?
+
+It is used to help extract data for site crawlers and search engines. It is basically a group of name-value pairs. The groups are called items, and each name-value pair is a property. Most of the search engines like Google, Microsoft, Yandex, etc follow schema.org vocabulary to extract this microdata. -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div itemscope itemtype="http://schema.org/SoftwareApplication">
+      <span itemprop="name">Interviewbit Games</span> - REQUIRES
+      <span itemprop="operatingSystem">ANDROID</span><br />
+      <link
+        itemprop="applicationCategory"
+        href="http://schema.org/GameApplication"
+      />
+      <div
+        itemprop="aggregateRating"
+        itemscope
+        itemtype="http://schema.org/AggregateRating"
+      >
+        RATING:
+        <span itemprop="ratingValue">4.6</span> (
+        <span itemprop="ratingCount">8864</span> ratings )
+      </div>
+      <div itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+        Price: Rs.<span itemprop="price">1.00</span>
+        <meta itemprop="priceCurrency" content="INR" />
+      </div>
+    </div>
+  </body>
+</html>

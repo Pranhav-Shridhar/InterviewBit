@@ -1,0 +1,41 @@
+<!-- What is the difference between <figure> tag and <img> tag?
+    
+    The <figure> tag specifies the self-contained content, like diagrams, images, code snippets, etc. <figure> tag is used to semantically organize the contents of an image like image, image caption, etc., whereas the <img> tag is used to embed the picture in the HTML5 document.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      figure {
+        border: 2px solid black;
+        padding: 5px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <figure>
+      <img
+        src="https://media.geeksforgeeks.org/wp-content/uploads/20210827151326/gfg-200x200.png"
+        alt="image"
+        width="200px"
+        height="200px"
+      />
+      <figcaption>Geeks For Geeks</figcaption>
+    </figure>
+
+    <img
+      src="https://media.geeksforgeeks.org/wp-content/uploads/20210827151326/gfg-200x200.png"
+      alt="image"
+      width="200px"
+      height="200px"
+    />
+
+    <p>Geeks For Geeks</p>
+  </body>
+</html>

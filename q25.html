@@ -1,0 +1,34 @@
+<!-- In how many ways can we specify the CSS styles for the HTML element?
+
+There are three ways in which we can specify the styles for HTML elements:
+
+Inline: Here we use the ‘style’ attribute inside the HTML element.
+Internal: Here we use the <style> tag inside the <head> tag. To apply the style we bind the elements using ‘id’ or ‘class’ attributes.
+External: Here we use the <link> tag inside <head> tag to reference the CSS file into our HTML code. Again the binding between elements and styles is done using ‘id’ or ‘class’ attributes. -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Internal -->
+    <style>
+      body {
+        background-color: powderblue;
+      }
+      h1 {
+        color: green;
+      }
+      p {
+        color: pink;
+      }
+    </style>
+
+    <!-- External -->
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- Inline -->
+    <h1 style="color: blue">A Blue Heading</h1>
+
+    <p style="color: red">A red paragraph.</p>
+  </body>
+</html>
